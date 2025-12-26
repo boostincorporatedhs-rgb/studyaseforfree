@@ -215,7 +215,7 @@ a{text-decoration:none;color:inherit}
   position:fixed;
   right:18px;
   top:120px;
-  width:240px;   /* thinner */
+  width:200px;   /* thinner */
   height:600px;
   z-index:50;
 }
