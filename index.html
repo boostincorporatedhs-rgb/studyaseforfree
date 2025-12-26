@@ -1,74 +1,115 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>StudyASEforFree.com</title>
-<meta name="description" content="Free ASE-style practice tests built to prepare technicians for real exam conditions." />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyASEforFree.com</title>
+  <meta name="description" content="Free ASE-style practice tests built to prepare technicians for real exam conditions." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-
-<!-- ================= HEADER (STICKY) ================= -->
+<!-- ================= HEADER (STICKY VIA CSS LATER) ================= -->
 <header class="topbar">
-<div class="topbar__left">
-<a class="brand" href="index.html" aria-label="StudyASEforFree Home">
-<picture>
-<source srcset="assets/logo/logo.svg" type="image/svg+xml">
-<img class="brand__logo" src="assets/logo/logo.png" alt="StudyASEforFree.com Logo">
-</picture>
-</a>
-</div>
+  <div class="topbar__left">
+    <a class="brand" href="index.html" aria-label="StudyASEforFree Home">
+      <picture>
+        <source srcset="assets/logo/logo.svg" type="image/svg+xml">
+        <img class="brand__logo" src="assets/logo/logo.png" alt="StudyASEforFree.com Logo">
+      </picture>
+    </a>
+  </div>
 
+  <div class="topbar__right">
+    <div class="topbar__tagline">
+      <div class="tagline__label">Preparing Next Generation Technicians</div>
+      <div class="tagline__sub">Free ASE-style practice exams • Real test conditions</div>
+    </div>
 
-<div class="topbar__right">
-<div class="topbar__tagline">
-<div class="tagline__label">Preparing Next Generation Technicians</div>
-<div class="tagline__sub">Free ASE-style practice exams • Real test conditions</div>
-</div>
-
-
-<div class="topbar__sponsor">
-<div class="sponsor__box">
-<div class="sponsor__title">Presenting Sponsor</div>
-<div class="sponsor__hint">728×90 Leaderboard</div>
-</div>
-</div>
-</div>
+    <div class="topbar__sponsor">
+      <div class="sponsor__box">
+        <div class="sponsor__title">Presenting Sponsor</div>
+        <div class="sponsor__hint">728×90 Leaderboard</div>
+      </div>
+    </div>
+  </div>
 </header>
-
 
 <!-- ================= MAIN LAYOUT ================= -->
 <div class="layout">
 
+  <!-- LEFT COLUMN -->
+  <aside class="leftcol">
+    <nav class="navcard" aria-label="Main navigation">
 
-<!-- LEFT COLUMN -->
-<aside class="leftcol">
-<nav class="navcard" aria-label="Main navigation">
+      <!-- RESOURCES FIRST -->
+      <div class="navcard__title">Resources</div>
+      <ul class="navlist">
+        <li><a href="resources/test-tips.html">Test Tips & Tricks</a></li>
+        <li><a href="resources/test-format.html">ASE Test Format</a></li>
+        <li><a href="resources/ase-reasoning.html">ASE Reasoning</a></li>
+      </ul>
 
+      <div class="navcard__title navcard__title--spaced">Main Test Series</div>
+      <ul class="navlist">
+        <li><a href="tests/a1.html">A1 – Engine Repair</a></li>
+        <li><a href="tests/a2.html">A2 – Automatic Transmission</a></li>
+        <li><a href="tests/a3.html">A3 – Manual Drivetrain & Axles</a></li>
+        <li><a href="tests/a4.html">A4 – Suspension & Steering</a></li>
+        <li><a href="tests/a5.html">A5 – Brakes</a></li>
+        <li><a href="tests/a6.html">A6 – Electrical / Electronic Systems</a></li>
+        <li><a href="tests/a7.html">A7 – HVAC</a></li>
+        <li><a href="tests/a8.html">A8 – Engine Performance</a></li>
+        <li class="navlist__divider"></li>
+        <li><a href="tests/g1.html">G1 – Maintenance & Light Repair</a></li>
+      </ul>
+    </nav>
 
-<!-- RESOURCES FIRST -->
-<div class="navcard__title">Resources</div>
-<ul class="navlist">
-<li><a href="resources/test-tips.html">Test Tips & Tricks</a></li>
-<li><a href="resources/test-format.html">ASE Test Format</a></li>
-<li><a href="resources/ase-reasoning.html">ASE Reasoning</a></li>
-</ul>
+    <!-- BOTTOM AD (MARKED FOR STICKY) -->
+    <section class="ad ad--box ad--bottom">
+      <div class="ad__label">Ad Space</div>
+      <div class="ad__hint">300×250</div>
+    </section>
+  </aside>
 
+  <!-- CENTER CONTENT -->
+  <main class="content">
+    <section class="hero">
+      <h1>Study ASE for Free</h1>
+      <p class="hero__lead">
+        Built to help technicians prepare for real ASE exams through realistic,
+        exam-length practice tests and accurate industry content.
+      </p>
 
-<div class="navcard__title navcard__title--spaced">Main Test Series</div>
-<ul class="navlist">
-<li><a href="tests/a1.html">A1 – Engine Repair</a></li>
-<li><a href="tests/a2.html">A2 – Automatic Transmission</a></li>
-<li><a href="tests/a3.html">A3 – Manual Drivetrain & Axles</a></li>
-<li><a href="tests/a4.html">A4 – Suspension & Steering</a></li>
-<li><a href="tests/a5.html">A5 – Brakes</a></li>
-<li><a href="tests/a6.html">A6 – Electrical / Electronic Systems</a></li>
-<li><a href="tests/a7.html">A7 – HVAC</a></li>
-<li><a href="tests/a8.html">A8 – Engine Performance</a></li>
-<li class="navlist__divider"></li>
-<li><a href="tests/g1.html">G1 – Maintenance & Light Repair</a></li>
-</ul>
-</nav>
+      <div class="cta">
+        <a class="btn btn--primary" href="tests/a1.html">Start A1 Practice Test</a>
+        <a class="btn btn--ghost" href="tests/a5.html">Go to A5 Brakes</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><div class="step__num">1</div><div class="step__text">Choose an ASE test series.</div></div>
+        <div class="step"><div class="step__num">2</div><div class="step__text">Complete a full-length practice exam.</div></div>
+        <div class="step"><div class="step__num">3</div><div class="step__text">Receive your score at completion.</div></div>
+        <div class="step"><div class="step__num">4</div><div class="step__text">Review weak areas and retest.</div></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> StudyASEforFree.com</div>
+    </footer>
+  </main>
+</div>
+
+<!-- RIGHT FLOATING AD (CSS MAKES IT STICKY NEXT) -->
+<aside class="ad ad--floating" aria-label="Right sticky ad">
+  <div class="ad__label">Ad Space</div>
+  <div class="ad__hint">300×600</div>
+</aside>
+
+<script src="script.js"></script>
+</body>
 </html>
