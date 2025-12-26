@@ -1,4 +1,9 @@
-/* ===== Design Tokens ===== */
+/* =========================================================
+   StudyASEforFree — FINAL LAYOUT CSS
+   Purpose: Locked logo, no tile overlap, proportional sticky ads
+   Copy/Paste entire file into style.css
+========================================================= */
+
 :root{
   --bg:#f6f7fb;
   --card:#ffffff;
@@ -15,7 +20,7 @@
 
 /* ===== Reset ===== */
 *{box-sizing:border-box}
-html,body{margin:0}
+html,body{margin:0;padding:0}
 body{
   background:var(--bg);
   color:var(--text);
@@ -24,7 +29,7 @@ body{
 }
 a{text-decoration:none;color:inherit}
 
-/* ===== HEADER (STICKY) ===== */
+/* ===== HEADER ===== */
 .topbar{
   position:sticky;
   top:0;
@@ -33,13 +38,25 @@ a{text-decoration:none;color:inherit}
   display:grid;
   grid-template-columns:320px 1fr;
   gap:16px;
-  padding:14px 18px;
+  padding:12px 18px;
   border-bottom:2px solid var(--gold-soft);
 }
 
+.topbar__left{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+}
+
 .brand__logo{
-  max-width:240px;
+  max-width:200px;
   height:auto;
+  display:block;
 }
 
 .topbar__right{
@@ -53,6 +70,7 @@ a{text-decoration:none;color:inherit}
   font-weight:800;
   font-size:1.25rem;
 }
+
 .tagline__sub{
   font-size:.95rem;
   color:var(--muted);
@@ -74,6 +92,7 @@ a{text-decoration:none;color:inherit}
   grid-template-columns:320px 1fr;
   gap:18px;
   padding:18px;
+  padding-right:280px; /* reserves space for right ad */
 }
 
 /* ===== LEFT COLUMN ===== */
@@ -95,6 +114,7 @@ a{text-decoration:none;color:inherit}
   font-weight:900;
   margin-bottom:10px;
 }
+
 .navcard__title--spaced{
   margin-top:14px;
 }
@@ -115,6 +135,7 @@ a{text-decoration:none;color:inherit}
   border:1px solid var(--gold-soft);
   font-weight:700;
 }
+
 .navlist a:hover{
   background:#fffdf7;
   border-color:var(--gold);
@@ -159,10 +180,12 @@ a{text-decoration:none;color:inherit}
   font-weight:800;
   border:1px solid var(--line);
 }
+
 .btn--primary{
   background:#1e40af;
   color:#fff;
 }
+
 .btn--ghost{
   background:#fff;
 }
@@ -173,6 +196,7 @@ a{text-decoration:none;color:inherit}
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px;
 }
+
 .step{
   display:grid;
   grid-template-columns:42px 1fr;
@@ -182,6 +206,7 @@ a{text-decoration:none;color:inherit}
   border-radius:14px;
   border:1px solid var(--line);
 }
+
 .step__num{
   width:42px;
   height:42px;
@@ -192,6 +217,7 @@ a{text-decoration:none;color:inherit}
   display:grid;
   place-items:center;
 }
+
 .step__text{
   font-weight:650;
 }
@@ -200,35 +226,30 @@ a{text-decoration:none;color:inherit}
 .ad{
   background:var(--card);
   border:2px dashed var(--gold-soft);
-  border-radius:var(--radius);
   display:grid;
   place-items:center;
   color:var(--muted);
 }
-.ad__label{
-  font-weight:900;
-  color:var(--text);
-}
 
-/* Right floating skyscraper */
+/* Right sticky skyscraper */
 .ad--floating{
   position:fixed;
   right:18px;
-  top:120px;
-  width:200px;   /* thinner */
-  height:600px;
+  top:110px;   /* below header */
+  width:220px;
+  height:520px;
   z-index:50;
 }
 
-/* Bottom sticky ad */
+/* Bottom sticky footer takeover */
 .ad--bottom{
   position:sticky;
   bottom:0;
-  height:120px;          /* thinner */
-  width:100vw;           /* full viewport width */
-  margin-left:calc(-50vw + 50%); /* break out of layout */
-  border-radius:0;       /* feels like a footer takeover */
-  z-index:30;
+  height:90px; /* proportional to header */
+  width:100vw;
+  margin-left:calc(-50vw + 50%);
+  border-radius:0;
+  z-index:40;
 }
 
 /* ===== FOOTER ===== */
@@ -240,6 +261,9 @@ a{text-decoration:none;color:inherit}
 /* ===== RESPONSIVE ===== */
 @media (max-width:1100px){
   .ad--floating{display:none}
-  .layout{grid-template-columns:1fr}
+  .layout{
+    grid-template-columns:1fr;
+    padding-right:18px;
+  }
   .steps{grid-template-columns:1fr}
 }
