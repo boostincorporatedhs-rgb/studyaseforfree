@@ -214,8 +214,8 @@ a{text-decoration:none;color:inherit}
 .ad--floating{
   position:fixed;
   right:18px;
-  top:120px; /* clears sticky header */
-  width:300px;
+  top:120px;
+  width:240px;   /* thinner */
   height:600px;
   z-index:50;
 }
@@ -224,8 +224,11 @@ a{text-decoration:none;color:inherit}
 .ad--bottom{
   position:sticky;
   bottom:0;
-  height:250px;
-  z-index:20;
+  height:120px;          /* thinner */
+  width:100vw;           /* full viewport width */
+  margin-left:calc(-50vw + 50%); /* break out of layout */
+  border-radius:0;       /* feels like a footer takeover */
+  z-index:30;
 }
 
 /* ===== FOOTER ===== */
